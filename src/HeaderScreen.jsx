@@ -3,7 +3,7 @@ import React from "react";
 const HeaderScreen = () => {
   return (
     <header>
-      <h1>WELCOME!</h1>
+      <h1>ALL PHOTOS</h1>
     </header>
   );
 };

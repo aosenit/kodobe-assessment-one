@@ -27,23 +27,21 @@ const PhotoDetails = () => {
     }
   }, [id]);
 
-  if (loading)
-    return (
-      <h2>
-        Loading photo <span style={{ color: "blue" }}>{id}</span> Details...
-      </h2>
-    );
+  if (loading) return <h2>Loading photo Details...</h2>;
 
   return (
     <div className="App photoDetails">
       {data && (
         <>
           <div className="container">
+            <h1>
+              PHOT0 <span style={{ color: "rgb(17, 17, 156)" }}>{id}</span>{" "}
+              DETAILS
+            </h1>
+            <br />
             <h2>
-              <span style={{ color: "rgb(17, 17, 156)", fontSize: "1.8rem" }}>
-                TITLE:
-              </span>{" "}
-              <br /> {data.title}
+              <span style={{ color: "rgb(17, 17, 156)" }}>TITLE:</span>{" "}
+              {data.title}
             </h2>
             <div className="image">
               <img src={data.url} alt="photo" />
